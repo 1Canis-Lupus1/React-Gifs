@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 import Preview from './Preview'
 import './uploadGif.css'
 
-export class Upload extends Component {
+class Upload extends Component {
 
     state = {
         selectedFile : null,
