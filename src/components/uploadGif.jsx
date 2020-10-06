@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './Upload.css'
 import {uploadFile} from '../http/http-calls'
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Preview from './Preview'
+import './uploadGif.css'
 
 export class Upload extends Component {
 
@@ -47,7 +47,7 @@ export class Upload extends Component {
             <React.Fragment>
                 <div >
                     <h1>Select Gif to Upload</h1>
-                    <form id = "uploadForm" onSubmit = {this.uploadFileHandler} style={myStyle}><br/>
+                    <form id = "upload" onSubmit = {this.uploadFileHandler} style={myStyle}><br/>
                     <input type="file" name="myImage" onChange={this.inputFileHandler} />
                     <button type="submit" style={myBtn}>Upload</button>
                     </form>

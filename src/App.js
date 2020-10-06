@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Menu from './components/Menu';
-import Trending from './components/Trending';
-import Upload from './components/Upload';
+import Navigation from './components/Nav';
+import Trending from './components/trendingGif';
+import Upload from './components/uploadGif';
 import Search from './components/Search';
 import Preview from './components/Preview';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Menu />
+        <Navigation />
         <Switch>
           <Route path = "/trending" exact component = {Trending} />
           <Route path = "/search" component = {Search} />

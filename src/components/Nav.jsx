@@ -1,13 +1,13 @@
 import React from 'react'
-import './Menu.css'
+import './Nav.css'
 import {Link} from 'react-router-dom'
 
-function Menu() {
+function Navigation() {
     return (
         <div>
-            <nav className = "nav-area">
+            <nav className = "logo">
                 <h3>Gifs Search/Uploader</h3>
-                <ul className = "nav-links">
+                <ul className = "link">
                     <Link to = "/trending">
                         <li className = "trending">Trending</li>
                     </Link>
@@ -23,4 +23,4 @@ function Menu() {
     )
 }
 
-export default Menu;
+export default Navigation;

@@ -6,23 +6,23 @@ import ListShow from './ListShow'
 class Search extends Component {
 
     state = {
-        searchItem : '',
-         data : []
+        searchVal : '',
+        initialData : []
     }
 
     handleInput = (e) => {
         this.setState({
-            searchItem : e.target.value
+            searchVal : e.target.value
         })
     }
     
     searchGif = (e) => {
         e.preventDefault()
-        const input = this.state.searchItem
+        const input = this.state.searchVal
         if (input.trim() !== '') {
             search(input).then(resp => {
                 this.setState({
-                    data : resp
+                    initialData : resp
                 })
             }).catch(err => console.log(err))
         }
@@ -33,11 +33,11 @@ class Search extends Component {
            <div>
                <form id = "searchForm" onSubmit = {this.searchGif}>
                    <input type = "text" placeholder = "Search Gifs by Name" 
-                        value = {this.state.searchItem} onChange = {this.handleInput}
+                        value = {this.state.searchVal} onChange = {this.handleInput}
                    />
                    <button type = "submit">Search</button>
                </form>
-               <ListShow list = {this.state.data} />
+               <ListShow list = {this.state.initialData} />
            </div>
         )
     }

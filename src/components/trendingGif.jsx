@@ -5,21 +5,21 @@ import ListShow from './ListShow'
 class Trending extends Component {
 
     state = {
-        data : []
+        initialData : []
     }
 
     componentDidMount() {
         const data = trending().then(resp => {
             this.setState({
-                data : resp
+                initialData : resp
             })
-        }).catch(err => console.log(err))
+        }).catch(error => console.log(error))
     }
 
     render() {
-        console.log(this.state.data)
+        console.log(this.state.initialData)
         return (
-            <ListShow list = {this.state.data} />
+            <ListShow list = {this.state.initialData} />
         )
     }
 }

@@ -5,7 +5,7 @@ export const trending = () => {
       makeGetRequest(
           "https://api.giphy.com/v1/gifs/trending",
           false,
-          { "api_key" : "RIU3oWjqWS24P7aDC9ZD2ygypGYOIXLC" }
+          { "api_key" : "AupKJH29iQcqubiIMOhzdC9H6HVY1UsJ" }
       )
       .then(res => {
           resolve(res.data);
@@ -23,7 +23,7 @@ export const search = (input) => {
         "https://api.giphy.com/v1/gifs/search",
         false,
         {
-          "api_key" : "RIU3oWjqWS24P7aDC9ZD2ygypGYOIXLC",
+          "api_key" : "AupKJH29iQcqubiIMOhzdC9H6HVY1UsJ",
           "q" : input
         }
     )
@@ -43,7 +43,7 @@ export const uploadFile = (file) => {
       "https://upload.giphy.com/v1/gifs",
       false,
       {
-        "api_key" : "RIU3oWjqWS24P7aDC9ZD2ygypGYOIXLC"
+        "api_key" : "AupKJH29iQcqubiIMOhzdC9H6HVY1UsJ"
       },
       file
     )

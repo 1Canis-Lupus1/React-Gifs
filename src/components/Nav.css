@@ -1,4 +1,4 @@
-.nav-area {
+.logo {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -7,7 +7,7 @@
     color: white;
 }
 
-.nav-links {
+.link {
    width: 40%;
    display: flex;
    justify-content: space-around;

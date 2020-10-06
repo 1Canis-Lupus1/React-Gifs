@@ -1,4 +1,4 @@
-const structureQueryParams = params => {
+const queryParams = params => {
     let queryStrings = "?";
     const keys = Object.keys(params);
     keys.forEach((key, index) => {
@@ -17,7 +17,7 @@ export const makeGetRequest = async (
   ) => {
     let queryString = "";
     if (params) {
-      queryString = structureQueryParams(params);
+      queryString = queryParams(params);
     }
     let headers = {
       Accept: "application/json",
@@ -52,7 +52,7 @@ export const makePostRequest = async (
 ) => {
   let queryString = "";
     if (params) {
-      queryString = structureQueryParams(params);
+      queryString = queryParams(params);
     }
   return new Promise((resolve, reject) => {
     try {
