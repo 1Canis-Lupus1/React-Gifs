@@ -1,0 +1,28 @@
+.nav-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: rgb(2, 187, 248);
+    color: white;
+}
+
+.nav-links {
+   width: 40%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   list-style: none;
+}
+
+.trending {
+    color: rgb(15, 14, 14);
+}
+
+.search {
+    color: rgb(17, 14, 14);
+}
+
+.upload {
+    color: rgb(19, 15, 15);
+}
